@@ -4,7 +4,6 @@ package academic.model;
  * @author 12S22040-Gracia Purba
  * @author 12S22020-Beatrice Siahaan
  */
-
  public class Lecturer {
    private String id;
    private String name;

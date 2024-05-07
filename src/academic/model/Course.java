@@ -6,6 +6,7 @@ import java.util.*;
  * @author 12S22020-Beatrice Siahaan
  */
 
+ 
 public class Course {
     private String code;
     private String name;

@@ -241,7 +241,39 @@ public class Driver1 {
                         enrollmentPrinter.printEnrollments(listEnrollments);
                     }
                     break;
+
+                    case "find-the-best-student":
+                String academicYearFind = tokens[1];
+                String semesterFind = tokens [2];
                 
+                HashMap<String, Double> studentGPA = new HashMap<>();
+                HashMap<String, String> studentSemester = new HashMap<>();
+
+                for (Student student1:students) {
+                    double gpa = calculateGPA (student1.getId(),enrollments, courses);
+                    studentGPA.put(student1.getId(),gpa);
+                    studentSemester.put(student1.getId(),student1.getYear());
+                }
+                    String bestStudent = null;
+                    double maxGpa = 0;
+
+                    for (Map.Entry<String, Double> entry:studentGPA.entrySet()) {
+                        String studentId = entry.getKey();
+                        double Gpa = entry.getValue();
+                        String studentYear = studentSemester.get(studentId);
+                    if (studentYear.equals(academicYearFind) && semesterFind.equals("odd") 
+                        && studentYear.endsWith("1")){
+                    if (Gpa > maxGpa){
+                        maxGpa = Gpa;
+                        bestStudent = studentId;
+                    } else if (Gpa == maxGpa) {
+                        if (studentSemester.get(bestStudent).equals("Even"))
+                        bestStudent = studentId;
+                    }
+                }
+            }
+                System.out.println(bestStudent);
+                break;
 
                 case "enrollment-remedial":
                     handleEnrollmentRemedial(enrollments, tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]);

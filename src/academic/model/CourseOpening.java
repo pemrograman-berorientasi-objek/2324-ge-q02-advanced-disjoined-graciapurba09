@@ -11,7 +11,6 @@ public class CourseOpening {
    private String semester;
    private String lecturerList;
    private String initials;
-   
 
    // Constructor
    public CourseOpening(String courseCode, String academicYear, String semester, String lecturerList) {
