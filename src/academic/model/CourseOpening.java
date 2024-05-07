@@ -5,6 +5,7 @@ package academic.model;
  * @author 12S22020-Beatrice Siahaan
 */
 
+
 public class CourseOpening {
    private String courseCode;
    private String academicYear;

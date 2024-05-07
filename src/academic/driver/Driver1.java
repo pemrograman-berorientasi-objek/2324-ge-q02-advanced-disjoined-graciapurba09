@@ -241,6 +241,7 @@ public class Driver1 {
                         enrollmentPrinter.printEnrollments(listEnrollments);
                     }
                     break;
+                    
 
                     case "find-the-best-student":
                 String academicYearFind = tokens[1];
