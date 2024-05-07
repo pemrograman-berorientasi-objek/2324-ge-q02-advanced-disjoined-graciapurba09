@@ -241,6 +241,7 @@ public class Driver1 {
                         enrollmentPrinter.printEnrollments(listEnrollments);
                     }
                     break;
+                
 
                 case "enrollment-remedial":
                     handleEnrollmentRemedial(enrollments, tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]);
@@ -338,7 +339,6 @@ public class Driver1 {
                 return 0.0;
         }
     }
-
 
     private static void handleEnrollmentRemedial(ArrayList<Enrollment> enrollments, String courseCode, String studentId,
             String academicYear, String semester, String grade) {
